@@ -17,3 +17,7 @@ rustflags = ["-C", "link-args=/STACK:8388608"]
 
 [target.aarch64-pc-windows-msvc]
 rustflags = ["-C", "link-args=/STACK:8388608"]
+
+[target.riscv64gc-unknown-linux-musl]
+rustflags = ["-C", "link-arg=-static"]
+linker = "riscv64-linux-musl-gcc"
